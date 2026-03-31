@@ -26,25 +26,6 @@ To deploy and manage this application effectively, we leverage Kubernetes and a 
 
 - **PersistentVolume and PersistentVolumeClaim**: These Kubernetes resources manage the storage required for the application, ensuring data persistence and scalability.
 
-## Learning Opportunities
-
-Creating and deploying this cloud-native web voting application with Kubernetes offers a valuable learning experience. Here are some key takeaways:
-
-1. **Containerization**: Gain hands-on experience with containerization technologies like Docker for packaging applications and their dependencies.
-
-2. **Kubernetes Orchestration**: Learn how to leverage Kubernetes to efficiently manage, deploy, and scale containerized applications in a production environment.
-
-3. **Microservices Architecture**: Explore the benefits and challenges of a microservices architecture, where the frontend and backend are decoupled and independently scalable.
-
-4. **Database Replication**: Understand how to set up and manage a MongoDB replica set for data redundancy and high availability.
-
-5. **Security and Secrets Management**: Learn best practices for securing sensitive information using Kubernetes secrets.
-
-6. **Stateful Applications**: Gain insights into the nuances of deploying stateful applications within a container orchestration environment.
-
-7. **Persistent Storage**: Understand how Kubernetes manages and provisions persistent storage for applications with state.
-
-By working through this project, you'll develop a deeper understanding of cloud-native application development, containerization, Kubernetes, and the various technologies involved in building and deploying modern web applications.
 
 
 ### **************************Steps to Deploy**************************
@@ -262,7 +243,15 @@ Test the full end-to-end cloud native application
  Using your local workstation's browser - browse to the URL created in the previous output.
 
 After the voting application has loaded successfully, vote by clicking on several of the **+1** buttons, this will generate AJAX traffic which will be sent back to the API via the API's assigned ELB.
+'''
 
+<img width="1075" height="661" alt="Image" src="https://github.com/user-attachments/assets/dd4b3ff5-0f5a-4e33-b227-2635ac9b3b09" />
+'''
+
+'''
+
+<img width="1054" height="555" alt="Image" src="https://github.com/user-attachments/assets/2118d3d2-c264-4839-940d-70c44bd7d6bc" />
+'''
 
 Query the MongoDB database directly to observe the updated vote data. In the terminal execute the following command:
 ```
@@ -271,4 +260,4 @@ kubectl exec -it mongo-0 -- mongo langdb --eval "db.languages.find().pretty()"
 
 ## **Summary**
 
-In this Project, you learnt how to deploy a cloud native application into EKS. Once deployed and up and running, you used your local workstation's browser to test out the application. You later confirmed that your activity within the application generated data which was captured and recorded successfully within the MongoDB ReplicaSet back end within the cluster.
+In this Project, I deployed a cloud native application into EKS. Once deployed and up and running, you used your local workstation's browser to test out the application. We can later confirm that our activity within the application generated data, which was captured and recorded successfully within the MongoDB ReplicaSet back end within the cluster.
